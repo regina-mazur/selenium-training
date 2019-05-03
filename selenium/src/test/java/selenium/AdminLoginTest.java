@@ -1,5 +1,6 @@
+package selenium;
+
 import org.junit.Test;
-import org.junit.rules.ExpectedException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
