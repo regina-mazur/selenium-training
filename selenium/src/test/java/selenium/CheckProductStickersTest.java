@@ -13,7 +13,7 @@ public class CheckProductStickersTest extends BaseTest {
     public void checkProductStickersTest(){
         driver.get(PropertyLoader.loadProperty("homepage.url"));
 
-        List<WebElement> productsList = driver.findElements(By.xpath("//li[@class='product column shadow hover-light']"));
+        List<WebElement> productsList = driver.findElements(By.xpath("//li[contains(@class,'product')]"));
         for(WebElement product : productsList){
             Assert.assertEquals(product.findElements(By.xpath(".//div[contains(@class,'sticker')]")).size(),1);
         }
