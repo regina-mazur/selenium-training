@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import util.PropertyLoader;
 
@@ -16,11 +17,11 @@ public class BaseTest {
 
     @Before
     public void start(){
-        //driver = new ChromeDriver();
+        driver = new ChromeDriver();
 
-        FirefoxOptions firefoxOptions = new FirefoxOptions();
-        firefoxOptions.setBinary("C:\\Program Files\\Firefox Nightly\\firefox.exe");
-        driver = new FirefoxDriver(firefoxOptions);
+        //FirefoxOptions firefoxOptions = new FirefoxOptions();
+        //firefoxOptions.setBinary("C:\\Program Files\\Firefox Nightly\\firefox.exe");
+        //driver = new FirefoxDriver(firefoxOptions);
         webDriverWait = new WebDriverWait(driver, 10);
     }
 
