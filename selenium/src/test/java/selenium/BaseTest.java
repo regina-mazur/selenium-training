@@ -32,8 +32,14 @@ public class BaseTest {
     }
 
     public void loginAsAdmin(){
+    void loginAsAdmin(){
         driver.findElement(By.name("username")).sendKeys(PropertyLoader.loadProperty("admin.username"));
         driver.findElement(By.name("password")).sendKeys(PropertyLoader.loadProperty("admin.password"));
+        driver.findElement(By.name("login")).click();
+    }
+    void loginAs(String email, String password){
+        driver.findElement(By.name("email")).sendKeys(email);
+        driver.findElement(By.name("password")).sendKeys(password);
         driver.findElement(By.name("login")).click();
     }
 }
