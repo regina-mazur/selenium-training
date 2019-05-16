@@ -16,7 +16,7 @@ public class OpenLinksInNewWindowTest extends BaseTest {
     @Test
     public void openLinksInNewWindow(){
         driver.get(PropertyLoader.loadProperty("admin.url"));
-        loginAsAdmin();
+        app.loginAsAdmin();
         driver.findElement(By.xpath("//span[contains(text(),'Countries')]")).click();
         driver.findElement(By.cssSelector("i.fa-pencil")).click();
         openLinks();

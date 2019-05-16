@@ -14,7 +14,7 @@ public class SortingTest extends BaseTest{
     @Test
     public void countriesSortingTest(){
         driver.get(PropertyLoader.loadProperty("admin.url"));
-        loginAsAdmin();
+        app.loginAsAdmin();
         driver.findElement(By.xpath("//span[contains(text(),'Countries')]")).click();
         Assert.assertTrue(checkCountriesSorting());
         Assert.assertTrue(checkGeoZonesInsideCountry());
@@ -23,7 +23,7 @@ public class SortingTest extends BaseTest{
     @Test
     public void geoZonesSortingTest(){
         driver.get(PropertyLoader.loadProperty("admin.url"));
-        loginAsAdmin();
+        app.loginAsAdmin();
         driver.findElement(By.xpath("//span[contains(text(),'Geo Zones')]")).click();
         Integer countriesCount = driver.findElements(By.cssSelector(".dataTable tr.row")).size();
 

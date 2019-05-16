@@ -41,7 +41,7 @@ public class AddingProductTest extends BaseTest {
     @Test
     public void addingProductTest(){
         driver.get(PropertyLoader.loadProperty("admin.url"));
-        loginAsAdmin();
+        app.loginAsAdmin();
         driver.findElement(By.xpath("//span[contains(text(),'Catalog')]")).click();
         driver.findElement(By.xpath("//a[contains(text(),'Add New Product')]")).click();
         fillProductFields(testData);

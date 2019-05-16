@@ -36,7 +36,7 @@ public class SignUpTest extends BaseTest {
         fillSignUpFields(testUser);
         driver.findElement(By.name("create_account")).click();
         driver.findElement(By.linkText("Logout")).click();
-        loginAs(testUser.getEmail(), testUser.getPassword());
+        app.loginAs(testUser.getEmail(), testUser.getPassword());
         Assert.assertTrue(driver.findElement(By.cssSelector("#notices .success")).isDisplayed());
     }
 
