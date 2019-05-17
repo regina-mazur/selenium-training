@@ -7,8 +7,12 @@ import util.PropertyLoader;
 public class LogsTest extends BaseTest {
     @Test
     public void checkBrowserLogs(){
-//        driver.get(PropertyLoader.loadProperty("admin.url"));
-//        app.loginAsAdmin();
-//        driver.findElement(By.xpath("//span[contains(text(),'Catalog')]")).click();
+        app.loginAsAdmin();
+        app.adminPage.openCategory();
+        for(int i =1; i<= app.adminPage.products.size(); i++){
+            app.adminPage.openProduct(i);
+            app.getBrowserLogs();
+            app.adminPage.cancelButton.click();
+        }
     }
 }
